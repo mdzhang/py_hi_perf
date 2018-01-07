@@ -11,3 +11,9 @@ lint:
 
 run:
 	python -m particle_sim
+
+test:
+	python -m unittest discover -s tests
+
+bench:
+	time PYTHONPATH=$$PYTHONPATH:./ python tests/benchmark.py

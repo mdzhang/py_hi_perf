@@ -4,8 +4,6 @@ mpl.use('TkAgg')
 from matplotlib import pyplot as plt
 from matplotlib import animation
 
-from .particle import Particle
-
 
 def visualize(simulator):
     X = [p.x for p in simulator.particles]
