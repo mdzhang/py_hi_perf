@@ -10,6 +10,12 @@ $ python -m venv venv
 $ source venv/bin/activate
 ```
 
+##### For profiling on OS X
+
+```
+$ brew install qcachegrind graphviz
+```
+
 ## Running
 
 

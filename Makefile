@@ -12,5 +12,17 @@ lint:
 run:
 	python -m particle_sim
 
+# Also has pytest benchmarks
 test:
 	pytest tests
+
+profile:
+	PYTHONPATH=$$PYTHONPATH:./ python tests/perf_profile.py
+
+lprofile:
+	PYTHONPATH=$$PYTHONPATH:./ kernprof -l -v tests/perf_benchmark.py
+
+taylor:
+	python -m cProfile -o prof.out taylor.py
+	pyprof2calltree -i prof.out -o prof.calltree
+	qcachegrind prof.calltree

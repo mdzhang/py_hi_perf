@@ -1,2 +1,4 @@
 flake8==3.5.0
+line-profiler==2.1.2
+pyprof2calltree==1.4.3
 yapf==0.20.0
